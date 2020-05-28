@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='funtions_package',
     version='0.1',
-    packages=['futions_package'],
+    packages=['funtions_package'],
 
     author='Jarok Ovalle',
     author_email='jrovalleqg@gmail.com',
@@ -18,18 +18,7 @@ setup(
 
     download_url='',
 
-    install_requires=['numpy',
-                      'scipy',
-		     ],
-
     include_package_data=True,
-    license='Simplified BSD License',
-    description="",
-
-    long_description=README,
-    long_description_content_type='text/markdown',
-
-    python_requires='>=3.6',
 
     classifiers=[
        'Development Status :: 4 - Beta',
@@ -37,18 +26,13 @@ setup(
        'Intended Audience :: Education',
        'Intended Audience :: Healthcare Industry',
        'Intended Audience :: Science/Research',
-       'License :: OSI Approved :: BSD License',
        'Programming Language :: Python :: 3.7',
        'Programming Language :: Python :: 3.8',
        'Topic :: Scientific/Engineering',
        'Topic :: Scientific/Engineering :: Artificial Intelligence',
-       'Topic :: Scientific/Engineering :: Human Machine Interfaces',
-       'Topic :: Scientific/Engineering :: Medical Science Apps.',
-       'Topic :: Software Development :: Embedded Systems',
        'Topic :: Software Development :: Libraries',
        'Topic :: Software Development :: Libraries :: Application Frameworks',
        'Topic :: Software Development :: Libraries :: Python Modules',
-       'Topic :: System :: Hardware :: Hardware Drivers',
     ],
 
 )
