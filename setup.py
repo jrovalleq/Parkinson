@@ -17,6 +17,13 @@ setup(
     maintainer_email='jrovalleq@gmail.com',
 
     download_url='',
+   
+    install_requires=['numpy',
+                      'scipy',
+                      'itk',
+                      'SimpleITK',
+                      'pyfreesurfer',
+                       ],
 
     include_package_data=True,
 
