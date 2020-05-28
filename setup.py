@@ -20,7 +20,6 @@ setup(
 
     install_requires=['numpy',
                       'scipy',
-                      SimpleITK,
 		     ],
 
     include_package_data=True,
