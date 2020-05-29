@@ -207,7 +207,7 @@ def PosFreesurferNameCorrection(ImagesDirection):
 def GetRoiFromArrays(SegmentedImagesDirection):
     Images = listdir(SegmentedImagesDirection)
     for i in range(len(Images)):
-        Image = '/home/jarok/Documentos/Parkinson/DB/IBSR/seg/' + Images[i]
+        Image = SegmentedImagesDirection + Images[i]
         SegmentedImage = sitk.ReadImage(Image)
         ArrayOfSegmentedImages = sitk.GetArrayFromImage(SegmentedImage)
         ArrayOfSegmentedImages = ArrayOfSegmentedImages.astype(int)
