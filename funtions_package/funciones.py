@@ -211,7 +211,7 @@ def GetRoiFromArrays(SegmentedImagesDirection):
         SegmentedImage = sitk.ReadImage(Image)
         ArrayOfSegmentedImages = sitk.GetArrayFromImage(SegmentedImage)
         ArrayOfSegmentedImages = ArrayOfSegmentedImages.astype(int)
-        ArrayOfSegmentedImages.append(ArrayOfSegmentedImages)
+        ArrayOfSegmentedImages = np.append(ArrayOfSegmentedImages, SegmentedImage)
     Roi = ArrayOfSegmentedImages[1]
     for i in range(len(ArrayOfSegmentedImages)-1):
         Roi = np.bitwise_or(Roi, ArrayOfSegmentedImages[i])
