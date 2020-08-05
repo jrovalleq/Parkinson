@@ -205,12 +205,13 @@ def PosFreesurferNameCorrection(ImagesDirection):
 #variables de salida: Roi = array de la Roi de todas las imagenes 
 #                     RoiImage = imagen del mimsmo tamaño delas imagenes con la Roi  
 def GetRoiFromArrays(SegmentedImagesDirection):
-    Images = listdir(SegmentedImagesDirection)    
+    Images = listdir(SegmentedImagesDirection) 
+    ArrayOfSegmentedImages = []
     for i in range(len(Images)):
         Image = SegmentedImagesDirection + Images[i]
         SegmentedImage = sitk.ReadImage(Image)
         ArrayOfSegmentedImage = sitk.GetArrayFromImage(SegmentedImage)
-        ArrayOfSegmentedImage = ArrayOfSegmentedImages.astype(int)
+        ArrayOfSegmentedImage = ArrayOfSegmentedImage.astype(int)
         np.append(ArrayOfSegmentedImages, ArrayOfSegmentedImage)
     Roi = ArrayOfSegmentedImages[1]
     for i in range(len(ArrayOfSegmentedImages)-1):
