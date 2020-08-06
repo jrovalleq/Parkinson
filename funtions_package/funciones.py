@@ -231,7 +231,7 @@ def GetRoiBoundingBox(RoiDirection):
     RoiArray = RoiArray.astype(int)
     for i in range(len(RoiArray[1,:,:])):
         k = np.where(RoiArray[i,:,:] == 1)
-        k = np.Array(k)
+        k = np.array(k)
         x = k.size
         #print(i,x)
         if x >= 1:
@@ -239,7 +239,7 @@ def GetRoiBoundingBox(RoiDirection):
             break
     for i in reversed(range(len(RoiArray[1,:,:]))):
         k = np.where(RoiArray[i,:,:] == 1)
-        k = np.Array(k)
+        k = np.array(k)
         x = k.size
         #print(i,x)
         if x >= 1:
@@ -247,7 +247,7 @@ def GetRoiBoundingBox(RoiDirection):
             break
     for i in range(len(RoiArray[:,1,:])):
         k = np.where(RoiArray[:,i,:] == 1)
-        k = np.Array(k)
+        k = np.array(k)
         y = k.size
         #print(i,y)
         if y >= 1:
@@ -255,7 +255,7 @@ def GetRoiBoundingBox(RoiDirection):
             break
     for i in reversed(range(len(RoiArray[:,1,:]))):
         k = np.where(RoiArray[:,i,:] == 1)
-        k = np.Array(k)
+        k = np.array(k)
         y = k.size
         #print(i,y)
         if y >= 1:
@@ -263,7 +263,7 @@ def GetRoiBoundingBox(RoiDirection):
             break
     for i in range(len(RoiArray[:,:,1])):
         k = np.where(RoiArray[:,:,i] == 1)
-        k = np.Array(k)
+        k = np.array(k)
         z = k.size
         #print(i,z)
         if z >= 1:
@@ -271,14 +271,14 @@ def GetRoiBoundingBox(RoiDirection):
             break
     for i in reversed(range(len(RoiArray[:,:,1]))):
         k = np.where(RoiArray[:,:,i] == 1)
-        k = np.Array(k)
+        k = np.array(k)
         z = k.size
         #print(i,z)
         if z >= 1:
             ocordenadaz = i
             break
-    ini = np.Array([icordenadax,icordenaday,icordenadaz])
-    out = np.Array([ocordenadax,ocordenaday,ocordenadaz])
+    ini = np.array([icordenadax,icordenaday,icordenadaz])
+    out = np.array([ocordenadax,ocordenaday,ocordenadaz])
     sizeBB = out-ini
     BB = np.ones((sizeBB))
     compx2x = (len(RoiArray[1,:,:]))-out[0]
