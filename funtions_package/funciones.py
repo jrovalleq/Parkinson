@@ -297,7 +297,7 @@ def GetRoiBoundingBox(RoiDirection):
     compZ2 = np.zeros((sizeBBX, sizeBBY, compz2z))
     BB = np.concatenate((compZ1, BB, compZ2), axis=2 )
     BBox = sitk.GetImageFromArray(BB)
-    return(sizeBB, BB, BBox)
+    return(ini,out,sizeBB, BB, BBox)
 
 
 def myshow(img, title=None, margin=0.05, dpi=80):
